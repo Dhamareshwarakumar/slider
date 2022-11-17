@@ -1,0 +1,136 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background: #FFF;
+}
+
+main {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-container {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F8F8F8;
+    border-radius: 12px;
+    position: relative;
+    justify-content: center;
+}
+
+.slider {
+    /* border: 1px solid red; */
+    width: 96%;
+    height: 400px;
+    margin: auto;
+    background: #F8F8F8;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow-x: auto;
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+.itemContainer {
+    /* min-width: 20%; */
+    /* height: 150px;
+    background-color: #FFF;
+    border-radius: 12px; */
+    position: relative;
+    left: 0;
+    transition: 0.5s;
+}
+
+@media screen and (max-width: 576px) {
+    .itemContainer {
+        flex: 0 0 50%;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .itemContainer {
+        flex: 0 0 25%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .itemContainer {
+        flex: 0 0 16.6666%;
+    }
+}
+
+/* .itemContainer:hover {
+    border: 1px solid #CCC;
+} */
+
+.left,
+.right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background: #FFF;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: xx-large;
+    box-shadow: 0 0 5px #CCC;
+}
+
+.left {
+    left: 15px;
+}
+
+.right {
+    right: 15px;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.left .arrow {
+    transform: translate(-60%, -55%);
+}
+
+.right .arrow {
+    transform: translate(-40%, -55%);
+}
+
+.item {
+    width: 150px;
+    height: 150px;
+    background-color: #FFF;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
